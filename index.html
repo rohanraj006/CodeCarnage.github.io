@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <video id="bgVideo" autoplay muted></video>
     <div class="container">
         <h1 class="title">
             CODE CARNAGE  
@@ -15,8 +16,8 @@
         </h1>
 
         <section class="section">
-            <h2 class="section-title">🚀 Event Overview</h2>
-            <div class="content-box">
+            
+            <div text-color = #ff0000> 
                 <p>CODE CARNAGE is an <b>intense 24-hour hackathon</b> where developers, designers, and AI enthusiasts come together to <b>build innovative AI-driven solutions</b> and battle for top prizes!</p>
             </div>
         </section>
@@ -106,17 +107,38 @@
                 observer.observe(section);
             });
         });
+
+        const video = document.getElementById("bgVideo");
+
+        // List of video files
+        const videos = ["vid2.mp4"];
+        let currentVideo = 0;
+
+        // Function to play the next video
+        function playNextVideo() {
+            currentVideo = (currentVideo + 1) % videos.length; // Loop through videos
+            video.src = videos[currentVideo]; // Set new video source
+            video.play(); // Start playing
+        }
+
+        // Set the first video and add event listener
+        video.src = videos[currentVideo];
+        video.addEventListener("ended", playNextVideo);
+
     </script>
 
     <style>
         /* Global Styles */
-        body, html {
-            background-color: #000;
-            color: #00ffcc;
-            font-family: 'Oxanium', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
+        
+
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         .container {
@@ -130,15 +152,15 @@
 
         /* Title Glitch Effect */
         @keyframes glitch {
-            0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
-            50% { text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff; }
-            100% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+            0% { text-shadow: 2px 2px #ff0000, -2px -2px #00aaff; }
+            50% { text-shadow: -2px -2px #ff0000, 2px 2px #00aaff; }
+            100% { text-shadow: 2px 2px #ff0000, -2px -2px #00aaff; }
         }
 
         .title {
             font-size: 80px;
             font-weight: bold;
-            color: #00ffcc;
+            color: #ffb700;
             animation: glitch 0.5s infinite alternate;
         }
 
@@ -146,7 +168,7 @@
             display: block;
             font-size: 30px;
             margin-top: -10px;
-            color: #00ffaa;
+            color: #ff6a00;
         }
 
         .section {
@@ -166,23 +188,24 @@
         .section-title {
             font-size: 24px;
             font-weight: bold;
-            color: #00ffcc;
-            border-bottom: 3px solid #00ffcc;
+            color: #ff1100;
+            /*border-bottom: 3px solid #00ffcc;*/
             padding-bottom: 5px;
             width: fit-content;
             margin: auto;
         }
 
         .content-box {
-            background-color: rgba(0, 255, 204, 0.15);
+            background-color: rgba(255, 115, 0, 0.212);
             padding: 15px;
             border-radius: 10px;
-            box-shadow: 0px 0px 15px #00ffcc;
+            box-shadow: 0px 0px 15px #ffc800;
             font-size: 17px;
             line-height: 1.8;
             margin-top: 10px;
             width: calc(100% - 40px);
             text-align: left;
+            color: antiquewhite;
         }
 
         /* Glitch Animation for Links */
