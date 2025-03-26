@@ -15,7 +15,11 @@
             <span class="subtitle">24HR HACKATHON</span>
             <span class="subtitle">organised by dept. of CSE[DS] </span>
         </h1>
-
+        <div class = white>
+            <p>Sponsored by:  </p>
+            <img src = willkosoft.png class = "square-img" alt = "willkasoft">
+            <img src = nyinst.jpeg class = "square-img" alt = "nyinst">
+        </div>
         <section class="section">
             
             <div class = "white"> 
@@ -23,8 +27,28 @@
             </div>
         </section>
 
+        <section class = "section">
+            <div class = "content-box">
+                <p> The compitation will be of 2 phases<br>
+                    <ol>
+                        <li>Phase 1:
+                        <ul>
+                            <li>Participants will be given 4 hours to complete a general problem statement (common for all).</li>
+                            <li>The problem statement will be disclosed on spot.</li>
+                        </ul>
+                        </li>
+                        <li>phase 2:
+                            <ul>
+                            <li> participants will be give given 20hrs to solve the problem statement from the given domains of their choice.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </p>
+            </div>                
+        </section>
+
         <section class="section">
-            <h2 class="section-title">📌 Problem Statements</h2>
+            <h2 class="section-title">📌 Problem Statements -<b>DOMAINS</b></h2>
             <div class="content-box">
                 <p>🛠 <b>General:</b> Solve a real-world challenge using AI.<br>
                 <!--💼 <b>Sponsors' Problem Statement:</b> Work on a challenge provided by our event sponsors.<br> -->
@@ -59,7 +83,7 @@
                 🚫 <b>No offensive content</b> in projects.<br>
                 💻 <b> each team should bring their own laptop. </b><br>
                 🎓 <b>College ID card is mandatory.</b><br>
-                🚫 <b> participants cannot leave the campus till the end of the hackathon</b></p>
+                </p>
             </div>
         </section>
 
@@ -263,6 +287,16 @@
             transition: transform 0.5s ease-in-out;
         }
 
+        .square-img {
+            width: 1.5in; /* 3.5 inches */
+            height: 1.5in; /* 3.5 inches */
+            object-fit: cover; /* Ensures the image covers the square */
+            border: 2px solid #000; /* Optional: Adds a border */
+        }
+        .square-img:hover {
+            transform: scale(1.05);
+            transition: transform 0.4s ease-in-out;
+        }
 
         .warning {
             color: yellow;
